@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/qb.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+
+    <style>
+
+        .main_banner{
+            width: 100%;
+            height: 360px;
+            background: url("img/rxb_banner_1ca5bb0.png") no-repeat center;
+        }
+        .main_banner_ct{
+            padding: 0 108px 0 40px;
+        }
+        .main_banner_lt{
+            margin-top: 54px;
+        }
+        .day_plan_logo{
+            width: 352px;
+            height: 78px;
+            background: url("img/rxb_title_d00ab1b.png") no-repeat left top;
+            margin:0 0 14px 5px;
+        }
+        .main_banner_icon{
+            margin-bottom: 34px;
+            font-size: 0;
+        }
+        .main_banner_icon li{
+            display: inline-block;
+            color: rgba(255,255,255,.9);
+            font-size: 22px;
+            line-height: 24px;
+            margin-right: 72px;
+        }
+        .main_banner_icon li i{
+            display: inline-block;
+            margin-right: 10px;
+            background-image: url("img/icon_sprites_9df6986.png");
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+        .banner-icon1{
+            width: 23px;height: 21px;
+            background-position: -10px -100px;
+        }
+        .banner-icon2{
+            width: 24px;height: 24px;
+            background-position: -54px -56px;
+        }
+        .banner-icon3{
+            width: 17px;height: 22px;
+            background-position: -100px -52px;
+        }
+        .main_banner_lt p{
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .main_banner_rt{
+            width: 334px;
+            height: 286px;
+            background:#fff;
+            margin-top: 37px;
+            display:table;
+        }
+        .banner_rt_middle{
+            vertical-align: middle;
+            display: table-cell;
+            text-align: center;
+            font-size: 0;
+        }
+        .banner_rt_middle h3{
+            color: #000;
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 33px;
+        }
+        .day_plan_num{
+            color: #fa4e4e;
+        }
+        .day_plan_num>span{
+            font-weight: 700;
+            font-size: 35px;
+        }
+        .day_plan_num>i{
+            font-size: 22px;
+        }
+        .day_plan_num .day_plan_num_ct{
+            font-size: 24px;
+        }
+        .banner_rt_middle p{
+            color: #999;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        /*中间部分*/
+        .day_ct{
+            padding-top: 32px;
+            padding-bottom: 20px;
+            background: url("img/ct_banner_8c369cf.png") no-repeat center;
+            line-height: 1;
+        }
+        .day_ct_hd{
+           text-align: center;
+        }
+        .day_ct_hd h3{
+            font-size: 25px;
+            font-weight: 700;
+            color:#1e1e1e ;
+            margin-bottom: 13px;
+        }
+        .day_ct_hd p{
+            color: #7a7a7a;
+            font-size: 17px;
+            position: relative;
+        }
+        .day_ct_hd p:before{
+            content: "";
+            position: absolute;
+            width: 37px;height: 4px;
+            background: #fa4e4e;
+            border-radius: 2px;
+            top: 40px;
+            left: 50%;
+            margin-left: -19px;
+        }
+        .day_plan_data{
+            position: relative;
+        }
+        .swiper_prev{
+            width: 79px;height: 79px;
+            position: absolute;
+            background: url("img/jiantou_left_5100eae.png") no-repeat center;
+            z-index: 10;
+            left: -34px;top:50%;
+            margin-top: -34px;
+            cursor: pointer;
+        }
+        .swiper_next{
+           width: 79px;height: 79px;
+            position: absolute;
+            background: url("img/jiantou_right_c436803.png") no-repeat center;
+            z-index: 10;
+            right: -34px;top:50%;
+            margin-top: -34px;
+            cursor: pointer;
+
+        }
+        /*swiper*/
+        .swiper-container {
+            width: 1680px;
+            height: 350px;
+        }
+        .swiper-slide {
+            margin-right: 0;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper_item{
+            margin: 0 5px;
+            width: 228px;height: 328px;
+            background: #fff;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+        .swiper_item h3{
+            font-size: 16px;
+            color: #1f1f1f;
+            margin: 32px 0 28px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .swiper_item .ct_play-data{
+            color: #fa4e4e;
+            margin-bottom: 10px;
+        }
+        .swiper_item p{
+            font-size: 14px;
+            color: #666;
+        }
+        .swiper_item_num{
+            margin: 45px 0 30px;
+            padding: 0 32px;
+            position: relative;
+        }
+        .swiper_item_num:before{
+            content: "";
+            position: absolute;
+            width: 1px;height: 38px;
+            background: #cbcbcb;
+            left: 50%;top:0;
+        }
+        .swiper_item_num>div>span{
+            font-size: 18px;
+            color: #1e1e1e;
+        }
+        .swiper_item_num>div>p{
+            margin-top: 8px;
+            color: #999;
+            line-height: 1;
+            font-size: 14px;
+        }
+        .swiper_item a{
+            display: block;
+            width: 160px;
+            height: 38px;line-height: 38px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 2px;
+            border: 1px solid #fa4e4e;
+            font-size: 16px;
+            color: #fa4e4e;
+        }
+        .swiper_item .dis_btn{
+            background-color: #f7f7f7;
+            border-color: #f7f7f7;
+            color: #666;
+        }
+
+
+
+        .day_ft{
+            border:1px solid #e6e6e6;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        .day_ft_nav{
+            height: 50px;line-height: 50px;
+            background-color: #f9f9f9;
+            border-bottom:1px solid #e6e6e6;
+            color: #333;
+        }
+        .day_ft_nav_lf{
+            width: 167px;
+            text-align: center;
+            background-color: #fff;
+            border-right:1px solid #e6e6e6;
+            color: #fa4e4e;
+            border-bottom: 1px solid #fff;
+            position: relative;
+        }
+        .day_ft_nav_lf:before{
+            content: "";
+            position: absolute;
+            width: 167px;height:2px;
+            background-color: #fa4e4e;
+            left: 0;right:0;top:-1px;
+        }
+        .day_ft_ct>div{
+            padding: 37px 88px 40px 70px
+        }
+        .day_introduce li{
+            margin-bottom: 32px;
+        }
+        .day_introduce li:last-child{
+            margin-bottom: 0;
+        }
+        .day_introduce h3{
+           margin-bottom: 9px;
+            color: #1e1e1e;
+            font-size: 18px;
+            position: relative;
+        }
+        .day_introduce h3:before{
+            content: "";
+            position: absolute;
+            width: 5px;height: 5px;
+            background:#fa4e4e ;
+            top:50%;left: -20px;
+            margin-top: -2px;
+        }
+        .day_introduce p{
+            font-size: 14px;
+            color: #554747;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header_top wrapp_widtn">
+        服务热线：400-618-6183  |  帮助中心
+        <div class="header_top_right">
+            <div>
+                <a href="">立即登录</a>|
+                <a href="">免费注册</a>
+            </div>
+            <div>
+                <a href="">
+                    <i class="icon_phone"></i>
+                    移动客户端
+                </a>
+            </div>
+            <div class="icon_sina_show">
+                <i class="icon_sina"></i>
+            </div>
+            <div class="icon_weix_show">
+                <i class="icon_weix"></i>
+            </div>
+        </div>
+    </div>
+    <div class="header_top_nav wrapp_widtn cl_fl">
+        <a href=""><img src="img/logo_c41f399.png" alt=""/></a>
+        <ul class="header_nav_right">
+            <li><a href="qb.html">首页</a></li>
+            <li class="J_show">
+                <a href="">理财频道</a>
+                <ul class="header_cd z_index">
+                    <li><a href="">日息宝计划</a></li>
+                    <li><a href="">月息宝计划</a></li>
+                    <li><a href="">活期</a></li>
+                    <li><a href="">散标</a></li>
+                </ul>
+            </li>
+            <li><a href="About.html">关于我们</a></li>
+            <li><a href="My.html"><i class="icon_user"></i>我的账户</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="main_banner">
+        <div class="wrapp_widtn">
+            <div class=" main_banner_ct cl_fl">
+                <div class="main_banner_lt fl">
+                    <div class="day_plan_logo"></div>
+                    <ul class="main_banner_icon">
+                        <li>
+                            <i class="banner-icon1"></i>
+                            分散投标
+                        </li>
+                        <li>
+                            <i class="banner-icon2"></i>
+                            分散投标
+                        </li>
+                        <li>
+                            <i class="banner-icon3"></i>
+                            分散投标
+                        </li>
+                    </ul>
+                    <p>日息宝计划是平台最新推出的标准化智能投标工具，省心投资，收益最大化。</p>
+                    <p>日息宝计划经由投资人授权，一键投资后，平台立即优先匹配投标，并由系统为投资人实现分散投标，节<br>
+                        省时间，提高效率。</p>
+                    <p>加入日息宝计划，匹配标的满额确认后，次日按日返息，到期还本。</p>
+                </div>
+                <div class="main_banner_rt fr">
+                    <div class="banner_rt_middle">
+                        <h3>优质日息宝计划</h3>
+                        <div class="day_plan_num">
+                            <span>9.08</span>
+                            <i>%</i>
+                            <span class="day_plan_num_ct">~</span>
+                            <span>11.86</span>
+                            <i>%</i>
+                        </div>
+                        <p>预期年化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="day_ct">
+        <div class="day_ct_hd">
+            <h3>最新项目</h3>
+            <p>项目多样 期限灵活  选择自由</p>
+        </div>
+        <div class="day_plan_data wrapp_widtn">
+            <div class="swiper_prev"></div>
+            <div class="swiper_next"></div>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper_item">
+                            <h3>日息宝E计划</h3>
+                            <div class="ct_play-data">
+                                <span>9.08</span>
+                                <i>%</i>
+                            </div>
+                            <p>预期年化</p>
+                            <div class="swiper_item_num cl_fl">
+                                <div class="fl">
+                                    <span>100</span>
+                                    <p>起投金额</p>
+                                </div>
+                                <div class="fr">
+                                    <span>1个月</span>
+                                    <p>项目期限</p>
+                                </div>
+                            </div>
+                            <a href="" class="dis_btn">立即加入</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper_item">
+                            <h3>日息宝E计划</h3>
+                            <div class="ct_play-data">
+                                <span>9.08</span>
+                                <i>%</i>
+                            </div>
+                            <p>预期年化</p>
+                            <div class="swiper_item_num cl_fl">
+                                <div class="fl">
+                                    <span>100</span>
+                                    <p>起投金额</p>
+                                </div>
+                                <div class="fr">
+                                    <span>1个月</span>
+                                    <p>项目期限</p>
+                                </div>
+                            </div>
+                            <a href="" class="dis_btn">立即加入</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper_item">
+                            <h3>日息宝E计划</h3>
+                            <div class="ct_play-data">
+                                <span>9.08</span>
+                                <i>%</i>
+                            </div>
+                            <p>预期年化</p>
+                            <div class="swiper_item_num cl_fl">
+                                <div class="fl">
+                                    <span>100</span>
+                                    <p>起投金额</p>
+                                </div>
+                                <div class="fr">
+                                    <span>1个月</span>
+                                    <p>项目期限</p>
+                                </div>
+                            </div>
+                            <a href="" class="dis_btn">立即加入</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper_item">
+                            <h3>日息宝E计划</h3>
+                            <div class="ct_play-data">
+                                <span>9.08</span>
+                                <i>%</i>
+                            </div>
+                            <p>预期年化</p>
+                            <div class="swiper_item_num cl_fl">
+                                <div class="fl">
+                                    <span>100</span>
+                                    <p>起投金额</p>
+                                </div>
+                                <div class="fr">
+                                    <span>1个月</span>
+                                    <p>项目期限</p>
+                                </div>
+                            </div>
+                            <a href="" class="dis_btn">立即加入</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper_item">
+                            <h3>日息宝E计划</h3>
+                            <div class="ct_play-data">
+                                <span>9.08</span>
+                                <i>%</i>
+                            </div>
+                            <p>预期年化</p>
+                            <div class="swiper_item_num cl_fl">
+                                <div class="fl">
+                                    <span>100</span>
+                                    <p>起投金额</p>
+                                </div>
+                                <div class="fr">
+                                    <span>1个月</span>
+                                    <p>项目期限</p>
+                                </div>
+                            </div>
+                            <a href="" class="dis_btn">立即加入</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="day_ft wrapp_widtn">
+        <div class="day_ft_nav cl_fl">
+            <div class="day_ft_nav_lf fl">项目说明</div>
+        </div>
+        <div class="day_ft_ct">
+            <div>
+                <ul class="day_introduce">
+                    <li>
+                        <h3>计划说明</h3>
+                        <p>日息宝计划是钱包金融平台为方便用户投资推出的标准化投资理财工具，用户加入日息宝计划后，平台立即启动优先匹配投标，在用户认可的标的范围内，对符合要求的标的进行优先自动投标，提高了用户投资的速度和灵活度，及时盘活用户资金，更好的满足用户多样化的理财需求。预期收益不等于实际收益，投资人需自行承担资金投资的风险与责任。</p>
+                    </li>
+                    <li>
+                        <h3>加入条件</h3>
+                        <p>100元起投，按100元的整数倍递增</p>
+                    </li>
+                    <li>
+                        <h3>退出方式</h3>
+                        <p>到期自动退出</p>
+                    </li>
+                    <li>
+                        <h3>计划规则</h3>
+                        <p>按日付息，到期还本。</p>
+                    </li>
+                    <li>
+                        <h3>项目类型</h3>
+                        <p>车辆抵押借款、个人日常消费借款、小企业信用贷</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 50,
+        // init: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            }
+        }
+    });
+
+    var swiper_container=document.querySelector(".swiper-container");
+
+    var i=0;
+    //下一张图片按钮点击
+    $(".swiper_next").click(function(){
+        console.log($(".swiper-slide").length);
+        i++;
+        console.log(i);
+        if(i==$(".swiper-slide ").length){
+            i=0;
+        }
+        $(".swiper-container").style.left=-i*296+"px";
+    });
+    //上一张图片按钮点击
+//    $(".swiper_prev").click(function(){
+//        alert("-1");
+//        i--;
+//        if(i==-1){
+//            i=$(".swiper-slide").length-1;
+//        }
+//        $(".swiper-slide").style.left=-k*296+"px";
+//    })
+
+</script>
+</body>
+</html>

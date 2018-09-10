@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户</title>
+    <link rel="stylesheet" href="css/qb.css"/>
+    <style>
+        .header_my{
+            padding: 20px 0 16px;
+        }
+        .my_middle{
+            width: 100%;height: 430px;
+            min-width: 1200px;
+            position: relative;
+            background: url("img/banner_e64434e.png") no-repeat center;
+        }
+        .main_lg{
+            width: 370px;
+            background: #fff;
+            border-radius: 2px;
+            position: absolute;
+            top:33px;right: 96px;
+            box-shadow: 0 0 24px 0 rgba(189,189,189,.45);
+        }
+        .main_lg_hd{
+            height: 56px;
+            line-height: 56px;
+            text-align: center;
+            color: #fa4e4e;
+            font-size: 20px;
+            box-shadow: 0 2px 15px rgba(131,131,131,.14);;
+        }
+        .main_form{
+            padding: 43px 30px 0 30px;
+        }
+        .form_group{
+            border: 1px solid #ddd;
+            height: 32px;line-height: 32px;
+            margin-bottom: 12px;
+            padding: 5px 0;
+            border-radius: 2px;
+        }
+        .login_icon{
+            display: inline-block;
+            background: url("img/login_sprite_23e1dcb.png") no-repeat;
+            vertical-align: middle;
+        }
+        .icon_pho{
+            width: 16px;height: 16px;
+            background-position: 0 -41px;
+            margin:-3px 11px 0 16px;
+        }
+        .form_input{
+            display: inline-block;
+            width: 260px;
+            height: 28px;line-height: 28px;
+            border: 0;
+            font-size: 14px;
+            color: #1e1e1e;
+        }
+        .icon_pw{
+            margin:-3px 11px 0 16px;
+            width: 14px;
+            height: 16px;
+            background-position: 0 -59px;
+
+        }
+        .form_btn{
+            width: 100%;
+            height: 40px;line-height: 40px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 2px;
+            color: #fff;
+            background-color: #fa4e4e;
+            border: 1px solid #fe4a4a;
+            margin-top: 15px;
+        }
+        .main_lg_bm{
+            height: 36px;
+            line-height: 36px;
+            margin-top: 8px;
+            padding: 0 30px;
+            font-size: 14px;
+        }
+        .main_lg_bm a{
+            color: #0094ff;
+        }
+        .main_lg_bm span{
+            color: #999;
+            font-weight: 400;
+        }
+
+        .lg_ft_left{
+            width: 720px;
+            margin: 37px 0 30px;
+        }
+        .lg_ft_link{
+            height: 36px;line-height: 36px;
+            font-size: 0;
+        }
+        .lg_ft_link a,
+        .lg_ft_link i,
+        .lg_ft_left p{
+            font-size: 14px;
+            color: #666;
+        }
+        .lg_ft_link i{
+            margin: 0 27px;
+        }
+        .lg_ft_left p{
+            line-height: 26px;
+        }
+        .lg_ft_left .lg_ft_text{
+            color: #999;
+            font-size: 12px;
+        }
+        .lg_ft_right{
+            margin-top: 28px;
+        }
+        .erweima_wrap{
+            width: 73px;
+            height: 73px;
+            background: #fff;
+            padding: 6px;
+            margin-right: 35px;
+        }
+        .erweima_wrap img{
+            display: block;
+            width: 73px;
+            height: 73px;
+        }
+        .ft_rt_text{
+            width: 257px;
+            text-align: right;
+            padding-right: 65px;
+            box-sizing: border-box;
+        }
+        .ft_rt_text h4{
+            font-weight: 400;
+            color: #666;
+            line-height: 22px;
+            font-size: 16px;
+            margin-bottom: 7px;
+
+        }
+        .footer_time{
+            width: 100px;height: 22px;
+            color: #fa4e4e;
+            border: 1px solid #fa4e4e;
+            font-size: 14px;
+            margin-bottom: 10px;
+            margin-left: 88px;
+            position: relative;
+        }
+        .footer_tip{
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header_my wrapp_widtn cl_fl">
+        <div class="fl">
+            <a href=""><img src="img/logo_c41f399.png" alt=""/></a>
+        </div>
+
+        <ul class="header_nav_right fr">
+            <li><a href="qb.html">首页</a></li>
+            <li class="J_show">
+                <a href="">理财频道</a>
+                <ul class="header_cd z_index">
+                    <li><a href="PlayDay.html">日息宝计划</a></li>
+                    <li><a href="PlayMouth.html">月息宝计划</a></li>
+                    <li><a href="Current.html">活期</a></li>
+                    <li><a href="List.html">散标</a></li>
+                </ul>
+            </li>
+            <li><a href="About.html">关于我们</a></li>
+            <li><a href="My.html"><i class="icon_user"></i>我的账户</a></li>
+        </ul>
+    </div>
+</header>
+<main class="my_middle">
+    <div class="main_lg">
+        <div class="main_lg_hd">
+            <a href="">手机号/用户名登录</a>
+        </div>
+        <form action="" class="main_form">
+           <div class="form_group">
+               <span class="login_icon icon_pho" style="background:red"></span>
+               <input type="text" placeholder="请输入手机号/用户名" class="form_input" style="background: blue">
+           </div>
+            <div class="form_group">
+                <span class="login_icon icon_pw"></span>
+                <input type="text" placeholder="请输入登录密码" class="form_input">
+            </div>
+            <button type="submit" class="form_btn">登录</button>
+        </form>
+        <div class="main_lg_bm cl_fl">
+            <div class="fl">
+                <a href="">忘记密码</a>
+            </div>
+            <div class="fr">
+                <span>还没有账号？</span>
+                <a href="">马上注册</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="wrapp_widtn cl_fl">
+    <div class="lg_ft_left fl">
+        <div class="lg_ft_link">
+            <a href="">关于我们</a>
+            <i>|</i>
+            <a href="">保障措施</a>
+            <i>|</i>
+            <a href="">帮助中心</a>
+        </div>
+        <p>Copyright © 2017 版权所有 闽ICP备15025259号-5</p>
+        <p class="lg_ft_text">* 市场有风险 投资需谨慎</p>
+    </div>
+    <div class="lg_ft_right fl">
+        <div class="erweima_wrap fl">
+            <img src="img/erweima.jpg" alt=""/>
+        </div>
+        <div class="ft_rt_text fl">
+            <h4>服务热线：400-618-6183</h4>
+            <div class="footer_time">9:00~21:00</div>
+            <p class="footer_tip">扫描下载钱包金融APP</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
